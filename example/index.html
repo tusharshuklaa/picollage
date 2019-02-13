@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SlicKollage</title>
+  <link rel="stylesheet" href="../dist/slicKollage.css">
+</head>
+<body>
+  <h1>This is an example of implementation of SlicKollage.js</h1>
+  <h3>Instructions:</h3>
+  <p>
+    There should be an element already available to hold the collage bfor einitializing th plugin.
+  </p>
+  <blockquote>This plugin has ZERO dependancy</blockquote>
+  <br>
+  <section>
+    <p>Here goes the collage:</p>
+    <div id="mySlicKollage"></div>
+  </section>
+
+  <script src="../dist/slickollage.js"></script>
+  <script>
+    const maxImages = new Array(25);
+    var images = maxImages.reduce((acc, v, i) => {
+      const imgName = (i + 1) + ".jpg";
+      if(acc.indexOf(v) === -1) {
+        acc.push(imgName);
+      }
+      return acc;
+    }, []);
+  </script>
+</body>
+</html>
